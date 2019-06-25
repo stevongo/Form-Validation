@@ -5,14 +5,13 @@
             if(el.value.trim() === '') {
                 var label = createEl('label',el.name.capitalize() + ' darf nicht leer sein');
                 label.className = 'error';
-                // el.parentElement.appendChild(label);
+       
                 el.parentElement.insertBefore(label,el.nextElementSibling);
             }
         }
 
         function removeErrors() {
             var error = document.getElementsByClassName('error');
-            /* div.errorMsg ausblenden */
             var errorMsg = document.getElementsByClassName('errorMsg')[0];
             errorMsg.style.visibility = 'hidden';
             while(error.length) {
@@ -20,7 +19,7 @@
             }
         }
 
-        /* Erster Fehler im div.errorMsg anzeigen */
+        
         function showFirstError() {
             var error = document.getElementsByClassName('error');
             var errorMsg = document.getElementsByClassName('errorMsg')[0];
