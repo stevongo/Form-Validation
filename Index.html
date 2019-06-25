@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Formular Validierung</title>
+    <link rel="stylesheet" href="../../lib/css/main.css">
+    <link rel="stylesheet" href="../../lib/css/form.css">
+    <script src="../../lib/js/lib.js"></script>
+    <script src="exercise_06.js"></script>
+</head>
+<body>
+    <h1>Formular Validierung</h1>
+    <form method="GET" action="../../lib/php/form.php" id="myFormId" name="myFormName">
+		<fieldset>
+            <div class="errorMsg"></div>
+            <legend>Persönliche Angaben</legend>
+			<label for="vorname">Vorname <span class="required">*</span></label>
+            <input type="text" id="vorname" name="vorname">
+            <br>
+			<label for="nachname">Nachname <span class="required">*</span></label>
+			<input type="text" id="nachname" name="nachname">
+		</fieldset>
+		<fieldset>
+			<legend>Geschlecht <span class="required">*</span></legend>
+			Weiblich: <input type="radio" id="radio_weiblich" name="geschlecht" value="w">
+			Männlich: <input type="radio" id="radio_männlich" name="geschlecht" value="m">
+			Intersexuel: <input type="radio" id="radio_intersexuel" name="geschlecht" value="i">
+		</fieldset>
+		<fieldset id="lieblingssprache">
+			<legend>Was ist Ihre Lieblingssprache? <span class="required">*</span></legend>
+			<input type="checkbox" class="lsprache" data-check="sprache" id="html" name="HTML"> HTML |
+			<input type="checkbox" class="lsprache" data-check="sprache" id="css" name="CSS"> CSS |
+			<input type="checkbox" class="lsprache" data-check="sprache" id="js" name="JavaScript"> JavaScript 
+		</fieldset>
+		<fieldset>
+			<legend>Welche Sprache wollen Sie noch lernen? <span class="required">*</span></legend>
+			<select name="sprache" id="sprache">
+				<option disabled selected>Bitte wählen</option>
+				<option value="php">PHP</option>
+				<option value="phyton">Phyton</option>
+				<option value="dart">Dart</option>
+				<option value="hack">Hack</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>AGBs <span class="required">*</span></legend>
+			AGB akzeptieren <input type="checkbox" id="agb" name="agb">
+		</fieldset>
+		<input type="submit" id="submit_btn" name="submit_btn" value="Absenden">
+		<input type="reset" id="clearForm" value="Alles löschen">
+    </form>
+
+    <noscript>
+        When you have eliminated the JavaScript, whatever remains must be an empty page.
+    </noscript>
+</body>
+</html>
