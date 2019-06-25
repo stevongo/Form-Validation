@@ -23,8 +23,7 @@ input.error, textarea.error {
 }
 
 select.error {
-    /* border: 1px solid #E00; */
-    /* color: #E00; */
+   
     background-color: #FFDCE5;
     border: none;
 }
